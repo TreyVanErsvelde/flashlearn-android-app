@@ -29,14 +29,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // ⭐ Setup toolbar
+        // REAL toolbar setup (needed for menu)
         val toolbar = findViewById<androidx.appcompat.widget.Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
-        supportActionBar?.setDisplayShowTitleEnabled(false) // disable default title
+        supportActionBar?.setDisplayShowTitleEnabled(false)
 
-        // ⭐ Set custom centered title
-        val titleText = findViewById<TextView>(R.id.toolbarTitle)
-        titleText.text = "FlashLearn"
+
+
+
+
 
         repository = FlashRepository.getInstance(this)
 

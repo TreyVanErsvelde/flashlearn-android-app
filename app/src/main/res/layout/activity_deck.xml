@@ -1,48 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-
+    <!-- Deck Title -->
     <TextView
         android:id="@+id/tvDeckName"
-        android:textSize="24sp"
-        android:textStyle="bold"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_extrabold" />
 
+    <!-- Deck Description -->
     <TextView
         android:id="@+id/tvDeckDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:textSize="16sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:textColor="@color/black"
+        android:layout_marginBottom="12dp" />
 
-    <Button
+    <!-- Add Card Button (floating pill style) -->
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnAddCard"
-        android:text="Add Card"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:layout_height="46dp"
+        android:text="Add Card"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_extrabold"
+        app:cornerRadius="24dp"
+        app:backgroundTint="@color/md_theme_light_primary"
+        android:elevation="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp" />
 
+    <!-- Cards List -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvCards"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:listitem="@layout/item_card" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"/>
 
 
-    <Button
-        android:id="@+id/btnStudy"
-        android:text="Study Mode"
+    <!-- Bottom Buttons -->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"/>
+        android:orientation="horizontal"
+        android:layout_marginTop="12dp">
 
-    <Button
-        android:id="@+id/btnTrivia"
-        android:text="Trivia Mode"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStudy"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="Study Mode"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_extrabold"
+            android:textSize="16sp"
+            app:cornerRadius="28dp"
+            app:backgroundTint="@color/md_theme_light_primary"
+            android:elevation="8dp"
+            android:layout_marginEnd="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTrivia"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_weight="1"
+            android:text="Trivia Mode"
+            android:textColor="@android:color/white"
+            android:fontFamily="@font/poppins_extrabold"
+            android:textSize="16sp"
+            app:cornerRadius="28dp"
+            app:backgroundTint="@color/md_theme_light_primary"
+            android:elevation="8dp"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
 </LinearLayout>
