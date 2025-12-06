@@ -88,7 +88,7 @@
             android:layout_width="0dp"
             android:layout_height="48dp"
             android:layout_weight="1"
-            android:text="Show Answer"
+            android:text="Show"
             android:textColor="@android:color/white"
             android:fontFamily="@font/poppins_extrabold"
             android:textSize="15sp"

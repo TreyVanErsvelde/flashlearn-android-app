@@ -205,4 +205,22 @@ public class FlashRepository {
             save();
         }
     }
+
+    public void updateDeck(int deckIndex, String newName, String newDescription) {
+        if (deckIndex >= 0 && deckIndex < decks.size()) {
+            Deck d = decks.get(deckIndex);
+            d.name = newName;
+            d.description = newDescription;
+            save();
+        }
+    }
+
+    public void updateCard(int deckIndex, int cardIndex, String newQ, String newA) {
+        Deck d = decks.get(deckIndex);
+        Card c = d.cards.get(cardIndex);
+        c.question = newQ;
+        c.answer = newA;
+        save();
+    }
+
 }

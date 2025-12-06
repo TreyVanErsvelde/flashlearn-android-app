@@ -123,9 +123,10 @@ class StudyModeActivity : AppCompatActivity() {
         isShowingAnswer = !isShowingAnswer
         updateCardDisplay()
 
-        // Update button text
-        btnFlip.text = if (isShowingAnswer) "Show Question" else "Show Answer"
+
+        btnFlip.text = "Show"
     }
+
 
     private fun shuffleCards() {
         if (currentCards.isEmpty()) return
