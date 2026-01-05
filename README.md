@@ -36,9 +36,3 @@ My contributions included:
 3. Sync Gradle and run on an emulator or physical device
 
 > Note: This project does not require API keys or internet access.
-
----
-
-### Optional: Technical Notes
-(You can keep your existing detailed sections below this point if you want.)
-
